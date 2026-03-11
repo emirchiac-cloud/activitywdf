@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity: Mobile Menu Makeover</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .content {
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+    
+    SCENARIO:
+    Your team is working on a food blog called "Tasty Travels." 
+    On desktop, the navigation menu fits perfectly across the top. 
+    But on mobile screens, the navigation links are stacked and 
+    taking up too much space, pushing the featured recipe article 
+    way down the page.
+    
+    YOUR TASK:
+    Hide the main navigation links inside an Offcanvas component. 
+    Users will click a hamburger button to reveal the menu.
+    
+    REQUIREMENTS:
+    1. Add a hamburger button (navbar-toggler) that triggers the offcanvas
+    2. Create an offcanvas component that slides in from the LEFT
+    3. Move the navigation links INSIDE the offcanvas body
+    4. Add a close button in the offcanvas header
+    
+    NAVIGATION LINKS TO USE:
+    • Home
+    • Recipes
+    • Destinations
+    • About Us
+    • Contact
+    
+    
+    NEED HELP?
+    - Offcanvas docs: https://getbootstrap.com/docs/5.3/components/offcanvas/
+    - Navbar toggler: https://getbootstrap.com/docs/5.3/components/navbar/#toggler
+    ================================================ -->
+
+    <!-- STEP 1: The Navbar (Already done for you) -->
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Tasty Travels</a>
+
+            <!-- TODO: Add the Hamburger Button here -->
+            <!-- Hint: Use button with classes .navbar-toggler, 
+                 and data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas" -->
+            <button class="navbar-toggler" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- TODO: Add the Offcanvas Menu here -->
+            <!-- Hint: This should be a div with classes .offcanvas, .offcanvas-start, 
+                 and id="menuOffcanvas" -->
+            <div class="offcanvas" id="menuOffcanvas">
+                <!-- TODO: Add offcanvas header with title and close button -->
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <!-- Close button uses class .btn-close and data-bs-dismiss="offcanvas" -->
+                    <button type="button" class="btn-close"></button>
+                </div>
+                <!-- TODO: Move the navigation links inside the offcanvas body -->
+                <div class="offcanvas-body">
+                    <!-- 
+                    TODO: Place the navigation links here
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                        ... etc ...
+                    </ul>
+                    -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content (So you can see the problem/solution) -->
+    <div class="content">
+        <h1>Featured: Best Pizza in Naples</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        <img src="https://placehold.co/600x400" alt="Pizza" class="img-fluid">
+
+        <!-- These links are CURRENTLY taking up space. Your job is to hide them! -->
+        <div class="mt-4 p-3 bg-light border rounded">
+            <p class="mb-2"><strong>Current Navigation (move these into offcanvas):</strong></p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li> |
+                <li class="list-inline-item"><a href="#">Recipes</a></li> |
+                <li class="list-inline-item"><a href="#">Destinations</a></li> |
+                <li class="list-inline-item"><a href="#">About Us</a></li> |
+                <li class="list-inline-item"><a href="#">Contact</a></li>
+            </ul>
+            <p class="text-muted small">⬆️ These links should be hidden in the offcanvas!</p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (Required for offcanvas to work) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
